@@ -7,6 +7,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 import sn.forage.entities.Client;
+import sn.forage.entities.Village;
 
 public class ClientImpl implements IClient{
 
@@ -34,6 +35,37 @@ public class ClientImpl implements IClient{
 	@Override
 	public List<Client> list() {
 		return em.createQuery("SELECT c FROM Client c").getResultList();
+	
+	}
+	
+	@Override
+	public Client getClient(Long id) {
+		Client c = new Client();
+		try {
+		  c = em.find(Client.class, id);
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return c;
+	}
+	
+	
+	@Override
+	public Client update(Client c) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public void deleteClient(Long id) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public Village getVillage(Long id) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

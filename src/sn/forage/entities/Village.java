@@ -1,6 +1,7 @@
 package sn.forage.entities;
 
-import java.util.Collection;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.*;
 
@@ -10,20 +11,23 @@ public class Village {
 	@Id
 	@GeneratedValue(strategy  = GenerationType.IDENTITY)
 	private int id;
+	@Column(name="libelle")
 	private String libelle;
 	@OneToMany(mappedBy = "village", fetch = FetchType.LAZY)
-    private Collection<Client> clients;
+    List<Client> clients = new ArrayList<Client>();
 	
 	public Village() {
         super();
     }
 
-	public Village(int id, String libelle, Collection<Client> clients) {
+	public Village(int id, String libelle, List<Client> clients) {
 		super();
 		this.id = id;
 		this.libelle = libelle;
 		this.clients = clients;
 	}
+
+
 
 	public int getId() {
 		return id;
@@ -41,12 +45,17 @@ public class Village {
 		this.libelle = libelle;
 	}
 
-	public Collection<Client> getClients() {
+	public List<Client> getClients() {
 		return clients;
 	}
 
-	public void setClients(Collection<Client> clients) {
+	public void setClients(List<Client> clients) {
 		this.clients = clients;
+	}
+
+	public void put(int id2, Village village) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }

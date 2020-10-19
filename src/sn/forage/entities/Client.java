@@ -8,12 +8,16 @@ public class Client {
 	@Id
 	@GeneratedValue(strategy  = GenerationType.IDENTITY)
 	private int id;
+	@Column(name="prenom")
 	private String prenom;
+	@Column(name="nom")
 	private String nom;
+	@Column(name="adress")
     private String adress;
+	@Column(name="telephone")
     private String telephone;
 	@ManyToOne  @JoinColumn( name="idVillage" )
-	private Village village;
+	private Village village;;
     
 	public Client() {
 		super();

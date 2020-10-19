@@ -13,8 +13,7 @@ public class Test {
 		IVillage villagedao = new VillageImpl();
 		IClient clientdao = new ClientImpl();
 		
-		Village village = new Village();
-		village.setLibelle("Taïba");
+		
 		
 		Client client = new Client();
 		client.setPrenom("Mor");
@@ -22,6 +21,9 @@ public class Test {
 		client.setAdress("Pire");
 		client.setTelephone("772442688");
 		//client.setVillage("Niany");
+		
+		Village village = new Village();
+		village.setLibelle("Pire");
 		
 		int ok = clientdao.add(client);
 		int osk = villagedao.add(village);
