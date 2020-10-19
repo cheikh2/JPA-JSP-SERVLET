@@ -53,7 +53,7 @@ public class ClientServlet extends HttpServlet {
  		String adress = request.getParameter("adress").toString();
  		String tel = request.getParameter("telephone").toString();
  		
- 		Long id =Long.parseLong(request.getParameter("idVillage"));
+ 		int id =Integer.parseInt(request.getParameter("idVillage"));
 		IVillage v = new VillageImpl();
 		Village village = v.getVillage(id);
  		//String village = request.getParameter("village").toString();

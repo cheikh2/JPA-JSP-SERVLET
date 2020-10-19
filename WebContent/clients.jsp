@@ -31,7 +31,7 @@
 				</div>
 				<div class="form-group">
 					<label>Village</label>
-					<input type="number" name="village"/>
+					<input type="text" name="idVillage"/>
 				</div>
 					<button type="submit" class="btn btn-primary">Ajouter</button>
 				</form>

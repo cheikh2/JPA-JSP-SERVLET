@@ -37,7 +37,7 @@ private EntityManager em;
 	}
 
 	@Override
-	public Village getVillage(Long id) {
+	public Village getVillage(int id) {
 		Village v = new Village();
 		try {
 		  v = em.find(Village.class, id);
