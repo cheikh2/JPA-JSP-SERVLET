@@ -67,5 +67,11 @@ public class ClientImpl implements IClient{
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Village> listVillage() {
+		return em.createQuery("SELECT v FROM Village v").getResultList();
+	}
 
 }

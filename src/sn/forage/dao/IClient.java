@@ -9,6 +9,7 @@ public interface IClient {
 
 	public int add(Client client);
 	public List<Client> list();
+	public List<Village> listVillage();
 	public Client getClient(Long id);
 	public Client update(Client c);
 	public void deleteClient(Long id);
