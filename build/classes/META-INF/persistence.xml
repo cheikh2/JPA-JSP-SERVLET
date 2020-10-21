@@ -6,6 +6,8 @@
  	
  	<class>sn.forage.entities.Client</class>
  	<class>sn.forage.entities.Village</class>
+ 	<class>sn.forage.entities.Role</class>
+ 	<class>sn.forage.entities.User</class>
  	
  	<properties>
  		<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>

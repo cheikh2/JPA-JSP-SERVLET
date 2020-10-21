@@ -33,7 +33,7 @@
 				<div class="form-group">
                         <label>Village</label>
                         <select class="form-control" name="idVillage">
-                            <option>Selectionnez un village</option>
+                            <option>Selectionnez_un_village</option>
                             <c:forEach items="${village}" var="v">
                                 <option value="${v.id}"> <c:out value="${v.libelle}" /> </option>
                             </c:forEach>
