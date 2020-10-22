@@ -19,7 +19,7 @@ import sn.forage.entities.Village;
 /**
  * Servlet implementation class ClientServlet
  */
-@WebServlet(urlPatterns ="/", name="client")
+@WebServlet(urlPatterns ="/Client", name="client")
 public class ClientServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private IClient clientdao;
@@ -71,6 +71,7 @@ public class ClientServlet extends HttpServlet {
  		
  		int ok = clientdao.add(client);
  		response.getWriter().println(ok);
+ 		response.sendRedirect("Client");
  	}
 
  }
