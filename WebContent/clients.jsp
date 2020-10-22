@@ -1,4 +1,5 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+   
 <!DOCTYPE html>
 <html>
 <head>
@@ -65,7 +66,7 @@
 									<td><a href="Edit.php?id=${cl.id}">Edit</a></td>
 									<td><a onclick="return confirm('Etes vous sûre ?')" href="Supprime.php?id=${cl.id}">Supprimer</a></td>
 									</tr>
-									</c:forEach>
+								</c:forEach>
 					</table>	  
             	</div>
         	</div>
